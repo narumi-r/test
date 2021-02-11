@@ -1,0 +1,738 @@
+* {
+  font-family: "Helvetica Neue";
+}
+
+header {
+  width: 100%;
+  padding: 0 4% 10px;
+
+  position:absolute;
+  z-index: 10;
+}
+
+/* ロゴ -----------------------------------------------------------------------------*/
+.logo>img{
+  width:267px;
+  height:73px;
+  margin: 48px 0 0 20%;
+
+  transition: all .3s ease;
+}
+
+img:hover {
+  opacity: .6;
+}
+
+/* ヘッダーメニュー -----------------------------------------------------------------------------*/
+.menu {
+  margin-left:300px;
+  margin: 80px 1% 0 auto;
+}
+
+li {
+  list-style: none;
+  margin:0px 20px;
+  padding-bottom: 5px;
+  
+}
+
+.menu ul a {
+  display: block;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+
+  transition: border .1s ease-in;
+}
+
+.menu ul a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+/* スライドショー ------------------------------------------------------------------------------*/
+.album {
+  position: relative;
+  background-color: rgba(187, 185, 185, 0.1);
+}
+
+.album img{
+  height: 850px;
+  width: 100%;
+  border-bottom-left-radius: 50% 3%;
+  border-bottom-right-radius: 50% 3%;
+  object-fit: cover;
+
+  animation:img 26s infinite;
+  opacity: 0;
+}
+
+.album .img1 { 
+  display: block;
+} 
+
+.album .img2 {
+  position: absolute;
+  top: 0;
+
+  animation-delay: 5s; 
+} 
+
+.album .img3 {
+  position: absolute;
+  top: 0;
+
+  animation-delay: 10s;
+}
+
+.album .img4 {
+  position: absolute;
+  top: 0;
+
+  animation-delay: 15s;
+}
+
+.album .img5 {
+  position: absolute;
+  top: 0;
+
+  animation-delay: 20s;
+}
+
+@keyframes img {
+  0%{
+    opacity: 0;
+  }
+  12.5%{
+    opacity: 1;
+  }
+  37.5%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+}
+
+/* ２ブロック目 ---------------------------------------------------------------------------*/
+.main {
+  height: 1030px;
+  width: 100%;
+  background-color: rgba(187, 185, 185, 0.1);
+}
+
+.main h1 {
+  padding: 127px 0 75px 0;
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 43px;
+}
+
+.contents {
+  width: 50%;
+  margin: 0 0 0 30%;
+  line-height: 35px;
+  font-size: 20px;
+}
+
+.paspol {
+  line-height: 60px;
+  width: 100%;
+}
+
+span {
+  display: inline-block;
+  margin: 40px 0 40px 12%;
+  font-size: 40px;
+}
+
+/* ３ブロック目 ----------------------------------------------------------------------------*/
+.product {
+  width: 100%;
+  height: 1250px;
+}
+
+.product-contents {
+  width: 814px;
+  margin: 0 auto;
+}
+
+.product-header {
+  display: flex;
+  margin: 111px 0 50px 0;
+}
+
+.product-header h1 {
+  font-weight: normal;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+.product-button {
+  margin: 0 0 0 auto;
+  border: 1px solid black ;
+  height: 44px;
+  width: 174px;
+  display: flex;
+  align-items: center;
+
+  transition: background-color .3s ease;
+}
+
+.product-button:hover {
+  background-color:black;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  position: relative;
+
+  transition: all .3s ease;
+}
+
+.link::before,
+.link::after{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: "";
+    vertical-align: middle;
+}
+
+.link:hover {
+  color: aliceblue;
+}
+
+.arrow::before{
+  left: 150px;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  transform: rotate(45deg);
+
+  transition: all .3s ease;
+}
+
+.arrow:hover::before {
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.product-button a {
+  display: block;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 15px;
+  padding: 11px 40px 11px 58px;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 757px;
+  margin: auto;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+.kyoto {
+  position: relative;
+  width: 240px;
+  text-decoration: none;
+  color: #141A1C;
+}
+
+.kyoto p {
+  margin: 38px 0 80px 0;
+}
+
+.kyoto .hover-effect {
+  position: absolute;
+  width: 100%;
+  height: 420px;
+  top: 0;
+  left: 0;
+  background-color: rgba(248, 248, 248, 0.3);
+  opacity: 0;
+  
+  transition: .3s ease-in-out;
+}
+
+.kyoto:hover {
+  color: #141A1C;
+}
+
+.kyoto:hover .hover-effect {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.hokkaido-calendar {
+  position: relative;
+  width: 240px;
+  text-decoration: none;
+  color: #141A1C;
+}
+
+.hokkaido-calendar:hover {
+  color: #141A1C;
+}
+
+.hokkaido-calendar p {
+  margin: 38px 0 80px 0;
+}
+
+.hokkaido-calendar .hover-effect {
+  position: absolute;
+  width: 100%;
+  height: 420px;
+  top: 0;
+  left: 0;
+  background-color: rgba(248, 248, 248, 0.3);
+  opacity: 0;
+  
+  transition: .3s ease-in-out;
+}
+
+.hokkaido-calendar:hover .hover-effect {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.hokkaido-travel {
+  position: relative;
+  width: 240px;
+  text-decoration: none;
+  color: #141A1C;
+}
+
+.hokkaido-travel:hover {
+  color: #141A1C;
+}
+
+.hokkaido-travel p {
+  margin: 38px 0 80px 0;
+}
+
+.hokkaido-travel .hover-effect {
+  position: absolute;
+  width: 100%;
+  height: 420px;
+  top: 0;
+  left: 0;
+  background-color: rgba(248, 248, 248, 0.3);
+  opacity: 0;
+  
+  transition: .3s ease-in-out;
+}
+
+.hokkaido-travel:hover .hover-effect {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.overseas {
+  position: relative;
+  width: 240px;
+  text-decoration: none;
+  color: #141A1C;
+}
+
+.overseas:hover {
+  color: #141A1C;
+}
+
+.overseas p {
+  margin: 38px 0 80px 0;
+}
+
+.overseas .hover-effect {
+  position: absolute;
+  width: 100%;
+  height: 420px;
+  top: 0;
+  left: 0;
+  background-color: rgba(248, 248, 248, 0.3);
+  opacity: 0;
+  
+  transition: .3s ease-in-out;
+}
+
+.overseas:hover .hover-effect {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.fes {
+  position: relative;
+  width: 240px;
+  text-decoration: none;
+  color: #141A1C;
+}
+
+.fes:hover {
+  color: #141A1C;
+}
+
+.fes p {
+  margin: 38px 0 80px 0;
+}
+
+.fes .hover-effect {
+  position: absolute;
+  width: 100%;
+  height: 480px;
+  top: 0;
+  left: 0;
+  background-color: rgba(248, 248, 248, 0.3);
+  opacity: 0;
+  
+  transition: .3s ease-in-out;
+}
+
+.fes:hover .hover-effect {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.die {
+  position: relative;
+  width: 240px;
+  text-decoration: none;
+  color: #141A1C;
+}
+
+.die:hover {
+  color: #141A1C;
+}
+
+.die p {
+  margin: 38px 0 80px 0;
+}
+
+.die .hover-effect {
+  position: absolute;
+  width: 100%;
+  height: 420px;
+  top: 0;
+  left: 0;
+  background-color: rgba(248, 248, 248, 0.3);
+  opacity: 0;
+  
+  transition: .3s ease-in-out;
+}
+
+.die:hover .hover-effect {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* ４ブロック目ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+.news {
+  height: 1925px;
+  width: 100%;
+  background-color: rgba(187, 185, 185, 0.1);
+}
+
+.news-container {
+  width: 814px;
+  margin: 0 auto;
+}
+
+.news-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 110px 0 70px 0;
+}
+
+.news-title h1 {
+  font-weight: normal;
+  font-size: 30px;
+}
+
+.article {
+  width: 100%;
+  height: 273px;
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  margin-bottom: 40px;
+}
+
+.article .hover-effect {
+  position: absolute;
+  width: 100%;
+  height: 273px;
+  top: 0;
+  left: 0;
+  background-color: rgba(248, 248, 248, 0.3);
+  opacity: 0;
+  
+  transition: .3s ease-in-out;
+}
+
+.article:hover .hover-effect {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.article-contents {
+  margin: 0 0 0 30px;
+}
+
+.article-title {
+  margin: 0 0 20px 0;
+}
+
+.article-contents h1 {
+  font-size: 17px;
+  letter-spacing: 3px;
+  line-height: 27px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  color: black;
+}
+
+.article-contents p {
+  font-size: 13px;
+  line-height: 23px;
+  color: rgb(122, 122, 122);
+}
+
+time {
+  font-size: 13px;
+  color: rgb(122, 122, 122);
+}
+
+.article2 {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  margin-bottom: 60px;
+}
+
+.article2 .hover-effect {
+  position: absolute;
+  width: 100%;
+  height: 280px;
+  top: 0;
+  left: 0;
+  background-color: rgba(248, 248, 248, 0.3);
+  opacity: 0;
+  
+  transition: .3s ease-in-out;
+}
+
+.article2:hover .hover-effect {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.article3 {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  margin-bottom: 60px;
+}
+
+.article2 .hover-effect {
+  position: absolute;
+  width: 100%;
+  height: 280px;
+  top: 0;
+  left: 0;
+  background-color: rgba(248, 248, 248, 0.3);
+  opacity: 0;
+  
+  transition: .3s ease-in-out;
+}
+
+.article2:hover .hover-effect {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* ５ブロック目ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+.share {
+  height: 117px;
+  width: 100%;
+  /* display: flex; */
+}
+
+.share-container {
+  width: 546px;
+  margin:0 auto;
+  padding-top: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-face {
+  text-decoration: none;
+  display: block;
+  width: 162px;
+  height: 46px;
+  border: 1px solid #4871A9;
+  color: #4871A9;
+  text-align: center;
+  line-height: 46px;
+  font-size: 13px;
+  letter-spacing: 1px;
+
+  transition: all .3s ease;
+}
+
+.button-face:hover {
+  background-color: #4871A9;
+  color: #fff;
+}
+
+.button-twitter {
+  text-decoration: none;
+  display: block;
+  width: 162px;
+  height: 46px;
+  border: 1px solid  #70BCD2;
+  color: #70BCD2;
+  text-align: center;
+  line-height: 46px;
+  font-size: 13px;
+  letter-spacing: 1px;
+
+  transition: all .3s ease;
+}
+
+.button-twitter:hover {
+  background-color: #70BCD2;
+  color: #fff;
+}
+
+.button-hatena {
+  text-decoration: none;
+  display: block;
+  width: 162px;
+  height: 46px;
+  border: 1px solid  #2F9BCC;
+  color: #2F9BCC;
+  text-align: center;
+  line-height: 46px;
+  font-size: 13px;
+  letter-spacing: 1px;
+
+  transition: all .3s ease;
+}
+
+.button-hatena:hover {
+  background-color: #2F9BCC;
+  color: #fff;
+}
+
+/* ６ブロック目ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+.footer-menu {
+  height: 87px;
+  width: 100%;
+  background-color: #939899;
+}
+
+.footer-menu-container {
+  width: 441px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.footer-top {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  transition: all .3s ease;
+}
+
+.footer-top:hover {
+  color: #d3dcdfec;
+}
+
+.footer-product {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  transition: all .3s ease;
+}
+
+.footer-product:hover {
+  color: #d3dcdfec;
+}
+
+.footer-about {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  transition: all .3s ease;
+}
+
+.footer-about:hover {
+  color: #d3dcdfec;
+}
+
+.footer-news {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  transition: all .3s ease;
+}
+
+.footer-news:hover {
+  color: #d3dcdfec;
+}
+
+.footer-contact {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  transition: all .3s ease;
+}
+
+.footer-contact:hover {
+  color: #d3dcdfec;
+}
+
+/* ７ブロック目ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+footer {
+  height: 157px;
+  width: 100%;
+  background-color: #646C6E;
+}
+
+.footer-container {
+  width: 785px;
+  margin: auto;
+  padding-top: 34px;
+  display: flex;
+  justify-content: space-between;
+  color: #FEFEFE;
+  font-size: 10px;
+}
+
+.footer-container p {
+  padding-top: 35px;
+  letter-spacing: 1px;
+}
