@@ -1,0 +1,6 @@
+@media (max-width: 702px) {
+  .main h1 {
+    text-align: start;
+    margin: 0 0 0 56px;
+  }
+}
